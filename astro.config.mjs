@@ -3,6 +3,7 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+	base: '/magic-mirror-doc',
 	integrations: [
 		starlight({
 			title: 'My Docs',

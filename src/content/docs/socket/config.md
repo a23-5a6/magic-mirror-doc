@@ -1,4 +1,7 @@
-# Socket Event : Config
+---
+title: Socketevent Config
+description: A guide in my new Starlight docs site.
+---
 
 ## Description
 L'evenement `config` permet d'envoyer la configuration du miroir magique au client. Celui ci est envoyé lors de la connection du client au socket.

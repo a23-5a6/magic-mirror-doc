@@ -1,4 +1,8 @@
-# Socket Event : Update
+---
+title: SocketEvent update
+description: A guide in my new Starlight docs site.
+---
+
 ## Description
 L'evenement `update` permet d'envoyer la mise à jour de la configuration du miroir magique au client. Celui ci est envoyé lors de la modification de la configuration du miroir magique. Cette evenement est déclenché sur tout les clients connectés au socket ayant un `_id` correspondant à celui de la configuration modifiée.
 

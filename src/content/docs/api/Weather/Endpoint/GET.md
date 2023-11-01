@@ -20,38 +20,73 @@ Ressource permettant la modification d'une configuration.
 ### Paramètre
 #### Requis
 
+`{id}`: Id de la ville recherché
+
 ### Réponses
-#### Succès
+#### Succès 200
 
-  - **Code:** 200 <br />
-    **Contenu:** `{
-    "data": {
-        "_id": 132,
-        "desktopIdleDelay": 30,
-        "isMilitaryTime": true,
-        "kioskIdleTime": {
-            "end": "20:00",
-            "start": "06:00"
-        },
-        "localization": "fr-FR",
-        "timeZone": {
-            "code": "GMT",
-            "offset": "+1"
-        },
-    "message": "Item updated successfully"
+```json
+{
+  "coord": {
+    "lon": -73.5878,
+    "lat": 45.5088
+  },
+  "weather": [
+    {
+      "id": 801,
+      "main": "Clouds",
+      "description": "peu nuageux",
+      "icon": "02n"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": -0.01,
+    "feels_like": -1.83,
+    "temp_min": -1.1,
+    "temp_max": 0.64,
+    "pressure": 1022,
+    "humidity": 55
+  },
+  "visibility": 10000,
+  "wind": {
+    "speed": 1.54,
+    "deg": 250
+  },
+  "rain": null,
+  "clouds": {
+    "all": 20
+  },
+  "dt": 1698879123,
+  "sys": {
+    "type": 1,
+    "id": 498,
+    "country": "CA",
+    "sunrise": 1698838403,
+    "sunset": 1698874942
+  },
+  "timezone": -14400,
+  "id": 6077243,
+  "name": "Montréal",
+  "cod": 200
 }
-}`
+```
 
-#### Erreur
-
-  - **Code:** 400 BAD CONTENT <br />
-    **Contenu:** `"missingField": [
-    "Missing data for required field."
-]`
-
-    OU
-
-  - **Code:** 404 NOT FOUND <br />
-    **Contenu:** `{
-    "error": "User not found in database"
-}`
+#### Erreur 404
+```json
+{
+  "error": "Id not found"
+}
+```
+#### Erreur 400
+```json
+{
+  "error": "Invalid city ID provided",
+}
+```
+#### Erreur 500
+```json
+{
+  "error": "Database error: {error-message}",
+}
+```

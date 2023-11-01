@@ -24,7 +24,6 @@ Ressource permettant la création d'une configuration.
   Content-Type: application/x-www-form-urlencoded
 
   - `_id=[string]` : L'id de l'utilisateur
-
   - `timeZone=[object]` : La configuration de la timeZone, comprenant:
     - `code=[string]` : Le code de la timeZone
     - `offset=[string]` : Le décalage horaire
@@ -33,27 +32,33 @@ Ressource permettant la création d'une configuration.
     - `end=[string]` : L'heure de fin
   - `isMilitaryTime=[boolean]` : Le format de l'heure
   - `desktopIdleDelay=[int]`: Le délai avant le passage en mode veille
+  - `weather[object]` : Objet gérant la météo, comprenant:
+    - `cityId=[string]` : L'id de la ville
+    - `celcius=[boolean]` : Le format de la température
   - `localization=[string]`: La langue du miroir
 
 - **Réponse de succès:**
 
   - **Code:** 201 <br />
-    **Contenu:** `{
+    **Contenu:** 
+```json
+  {
     "data": {
-        "_id": 132,
-        "desktopIdleDelay": 30,
-        "isMilitaryTime": true,
-        "kioskIdleTime": {
-            "end": "20:00",
-            "start": "06:00"
-        },
-        "localization": "fr-FR",
-        "timeZone": {
-            "code": "GMT",
-            "offset": "+1"
-        }
-}
-}`
+      "_id": 132,
+      "desktopIdleDelay": 30,
+      "isMilitaryTime": true,
+      "kioskIdleTime": {
+        "end": "20:00",
+        "start": "06:00"
+      },
+      "localization": "fr-FR",
+      "timeZone": {
+        "code": "GMT",
+        "offset": "+1"
+      }
+    }
+  }
+```
 
 - **Réponse d'erreur:**
 

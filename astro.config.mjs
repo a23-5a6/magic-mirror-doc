@@ -12,17 +12,10 @@ export default defineConfig({
       },
       sidebar: [
         {
-          label: "Welcome",
+          label: "Bienvenue",
           items: [
             // Each item here is one entry in the navigation menu.
-            { label: "Blah", link: "/magic-mirror/" },
-          ],
-        },
-        {
-          label: "Guides",
-          items: [
-            // Each item here is one entry in the navigation menu.
-            { label: "Example Guide", link: "/guides/example/" },
+            { label: "Magic Mirror", link: "/magic-mirror/" },
           ],
         },
         {

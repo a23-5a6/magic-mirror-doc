@@ -8,16 +8,16 @@ export default defineConfig({
     starlight({
       title: "Magic Mirror",
       social: {
-        github: "https://github.com/withastro/starlight",
+        github: "https://github.com/a23-5a6/",
       },
       sidebar: [
-		{
-			label: "Welcome",
+        {
+          label: "Welcome",
           items: [
             // Each item here is one entry in the navigation menu.
             { label: "Blah", link: "/magic-mirror/" },
           ],
-		},
+        },
         {
           label: "Guides",
           items: [
@@ -26,12 +26,20 @@ export default defineConfig({
           ],
         },
         {
-          label: "Reference",
-          autogenerate: { directory: "reference" },
+          label: "API",
+          autogenerate: { directory: "api" },
         },
         {
-          label: "Socket",
-          autogenerate: { directory: "socket" },
+          label: "App",
+          autogenerate: { directory: "app" },
+        },
+        {
+          label: "Packages",
+          autogenerate: { directory: "package" },
+        },
+        {
+          label: "Gateway",
+          autogenerate: { directory: "gateway" },
         },
       ],
     }),

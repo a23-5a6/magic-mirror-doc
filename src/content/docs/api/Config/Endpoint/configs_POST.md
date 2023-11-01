@@ -1,11 +1,11 @@
 ---
-title: Example Guide
+title: POST
 description: A guide in my new Starlight docs site.
 ---
 
-## **Modification d'une configuration**
+## **Création d'une configuration**
 
-Ressource permettant la modification d'une configuration.
+Ressource permettant la création d'une configuration.
 
 - **URL**
 
@@ -15,7 +15,7 @@ Ressource permettant la modification d'une configuration.
 
 - **Méthode:**
 
-  `PUT` : Pour la modification d'une configuration.
+  `POST` : Pour la création d'une configuration. La configuration est envoyé par le client
 
 - **Paramètres:**
 
@@ -37,7 +37,7 @@ Ressource permettant la modification d'une configuration.
 
 - **Réponse de succès:**
 
-  - **Code:** 200 <br />
+  - **Code:** 201 <br />
     **Contenu:** `{
     "data": {
         "_id": 132,
@@ -51,8 +51,7 @@ Ressource permettant la modification d'une configuration.
         "timeZone": {
             "code": "GMT",
             "offset": "+1"
-        },
-    "message": "Item updated successfully"
+        }
 }
 }`
 
@@ -60,12 +59,12 @@ Ressource permettant la modification d'une configuration.
 
   - **Code:** 400 BAD CONTENT <br />
     **Contenu:** `"missingField": [
-    "Missing data for required field."
-]`
+        "Missing data for required field."
+    ]`
 
     OU
 
-  - **Code:** 404 NOT FOUND <br />
+  - **Code:** 403 FORBIDDEN <br />
     **Contenu:** `{
-    "error": "User not found in database"
+    "error": "User already exists in database"
 }`

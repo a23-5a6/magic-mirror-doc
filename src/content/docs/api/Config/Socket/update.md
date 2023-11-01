@@ -1,5 +1,5 @@
 ---
-title: SocketEvent update
+title: Update
 description: A guide in my new Starlight docs site.
 ---
 
@@ -15,6 +15,9 @@ Lors de la mise a jour de la configuration, l'évenement `update` est déclench�
 - `kioskIdleTime=[object]` : heures d'activation et de désactivation du mode kiosk, comprenant:
   - `start=[string]` : L'heure de début
   - `end=[string]` : L'heure de fin
+- `weather[object]` : Objet gérant la météo, comprenant:
+  - `cityId=[string]` : L'id de la ville
+  - `celcius=[boolean]` : Le format de la température
 - `isMilitaryTime=[boolean]` : Le format de l'heure
 - `desktopIdleDelay=[int]`: Le délai avant le passage en mode veille
 - `localization=[string]`: La langue du miroir

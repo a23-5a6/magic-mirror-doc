@@ -1,5 +1,5 @@
 ---
-title: Socketevent Config
+title: Config
 description: A guide in my new Starlight docs site.
 ---
 
@@ -9,13 +9,12 @@ L'evenement `config` permet d'envoyer la configuration du miroir magique au clie
 ## Paramètres
 - `_id=[string]` : L'id de l'utilisateur, celui ci permet de retrouver et d'envoyer au client les données de configuration, si celles ci existent.
 
-### Valeurs de retour
+## Valeurs de retour
 
 **Succès** : <br>
 En cas de succès et si l'id est existant, le client reçoit un objet JSON contenant les données de configuration du miroir magique.<br>
 Les données sont les suivantes : 
   - `_id=[string]` : L'id de l'utilisateur
-
   - `timeZone=[object]` : La configuration de la timeZone, comprenant:
     - `code=[string]` : Le code de la timeZone
     - `offset=[string]` : Le décalage horaire
@@ -24,6 +23,9 @@ Les données sont les suivantes :
     - `end=[string]` : L'heure de fin
   - `isMilitaryTime=[boolean]` : Le format de l'heure
   - `desktopIdleDelay=[int]`: Le délai avant le passage en mode veille
+  - `weather[object]` : Objet gérant la météo, comprenant:
+    - `cityId=[string]` : L'id de la ville
+    - `celcius=[boolean]` : Le format de la température
   - `localization=[string]`: La langue du miroir
 
 - `HTTP Code: 200`

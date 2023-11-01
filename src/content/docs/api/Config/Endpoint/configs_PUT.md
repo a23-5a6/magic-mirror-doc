@@ -1,11 +1,11 @@
 ---
-title: Example Guide
+title: PUT
 description: A guide in my new Starlight docs site.
 ---
 
-## **Création d'une configuration**
+## **Modification d'une configuration**
 
-Ressource permettant la création d'une configuration.
+Ressource permettant la modification d'une configuration.
 
 - **URL**
 
@@ -15,7 +15,7 @@ Ressource permettant la création d'une configuration.
 
 - **Méthode:**
 
-  `POST` : Pour la création d'une configuration. La configuration est envoyé par le client
+  `PUT` : Pour la modification d'une configuration.
 
 - **Paramètres:**
 
@@ -37,7 +37,7 @@ Ressource permettant la création d'une configuration.
 
 - **Réponse de succès:**
 
-  - **Code:** 201 <br />
+  - **Code:** 200 <br />
     **Contenu:** `{
     "data": {
         "_id": 132,
@@ -51,7 +51,8 @@ Ressource permettant la création d'une configuration.
         "timeZone": {
             "code": "GMT",
             "offset": "+1"
-        }
+        },
+    "message": "Item updated successfully"
 }
 }`
 
@@ -59,12 +60,12 @@ Ressource permettant la création d'une configuration.
 
   - **Code:** 400 BAD CONTENT <br />
     **Contenu:** `"missingField": [
-        "Missing data for required field."
-    ]`
+    "Missing data for required field."
+]`
 
     OU
 
-  - **Code:** 403 FORBIDDEN <br />
+  - **Code:** 404 NOT FOUND <br />
     **Contenu:** `{
-    "error": "User already exists in database"
+    "error": "User not found in database"
 }`

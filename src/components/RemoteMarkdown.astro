@@ -1,0 +1,11 @@
+---
+import { marked } from "marked";
+const response = await fetch(
+  "https://raw.githubusercontent.com/a23-5a6/magic-mirror-packages/main/README.md?token=GHSAT0AAAAAACGGLSUEISJMYANFT63X4DXSZKBXOYA"
+);
+const markdown = await response.text();
+const content = marked.parse(markdown);
+const name = "RemoteMarkdown";
+---
+
+<article set:html={content} />

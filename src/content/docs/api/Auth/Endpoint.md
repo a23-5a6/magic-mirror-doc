@@ -1,5 +1,5 @@
 ---
-title: Sockets
+title: Endpoint
 description: A guide in my new Starlight docs site.
 ---
 
@@ -141,7 +141,7 @@ exemple : `http://localhost/auth/pair`
 **Contenu:** 
 ```json
 {
-  "bearer": "AAAAAAAAAAAAAAAAAAAAAMLheAAAAAAA0%2BuSeid%2BULvsea4JtiGRiSDSJSI%3DEUifiRBkKG5E2XzMDjRfl76ZC9Ub0wnz4XsNiRVBChTYbJcE3F"
+  "name": "magic-mirror-desktop"
 }
 ```
 
@@ -150,5 +150,13 @@ exemple : `http://localhost/auth/pair`
 ```json
 {
   "message": "Login failed; Invalid user ID or password."
+}
+```
+
+#### Code 404 Not Found
+**Contenu:**
+```json
+{
+  "message": "No device found"
 }
 ```

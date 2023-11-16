@@ -1,5 +1,5 @@
 ---
-title: GET
+title: Endpoint
 description: Ressource permettant la modification d'une configuration.
 ---
 

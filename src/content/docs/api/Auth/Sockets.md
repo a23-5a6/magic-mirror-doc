@@ -37,13 +37,3 @@ L'evenement `pairing-success` est appelé lors de la synchronisation d'un appare
   "bearer": "{token}"
 }
 ```
-
-## Connexion de l'appareil
-### Description
-L'evenement `disconnect` est reçus lorsque l'appareil a été correctement couplé.
-
-### Nom de l'évènement
-`disconnect`
-
-### Type d'évènements
-`on`

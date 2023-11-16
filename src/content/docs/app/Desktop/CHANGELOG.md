@@ -4,6 +4,14 @@ description: Projet de miroir intelligent
 ---
 
 ## Historique des versions
+### 1.2.0
+  - Ajout de l'authentification
+
+### 1.1.0
+  - Ajout du module de météo
+  - Ajout du module de la température
+  - Ajout de la configuration de la ville cible de la météo
+  - Ajout de la configuration du type de température (Celsius ou Fahrenheit)
 
 ### 1.0.3
   - Correction du passage a l'état idle en mode kiosk

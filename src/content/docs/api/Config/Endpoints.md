@@ -26,7 +26,6 @@ Ressource permettant la création d'une configuration.
 
 ```typescript
 {
-    _id: string, // L'id de l'utilisateur
     // La configuration de la timeZone, comprenant
     timeZone: { 
         code: string, // Le code de la timeZone
@@ -55,7 +54,6 @@ Ressource permettant la création d'une configuration.
 ```json
   {
     "data": {
-      "_id": 132,
       "desktopIdleDelay": 30,
       "isMilitaryTime": true,
       "kioskIdleTime": {
@@ -66,7 +64,12 @@ Ressource permettant la création d'une configuration.
       "timeZone": {
         "code": "GMT",
         "offset": "+1"
-      }
+      },
+      "weather": { 
+        "cityId": 756492, // L'id de la ville
+        "celcius": true // Le format de la température
+      },
+      "localization": "fr-CA"
     }
   }
 ```
@@ -109,7 +112,6 @@ Ressource permettant la modification d'une configuration.
 
   ```typescript
   {
-    _id: string, // L'id de l'utilisateur
     // La configuration de la timeZone, comprenant
     timeZone: { 
         code: string, // Le code de la timeZone
@@ -138,7 +140,6 @@ Ressource permettant la modification d'une configuration.
 ```json
 {
   "data": {
-    "_id": 132,
     "desktopIdleDelay": 30,
     "isMilitaryTime": true,
     "kioskIdleTime": {
@@ -150,6 +151,11 @@ Ressource permettant la modification d'une configuration.
       "code": "GMT",
       "offset": "+1"
     },
+    "weather": { 
+        "cityId": 756492, // L'id de la ville
+        "celcius": true // Le format de la température
+    },
+    "localization": "fr-CA",
     "message": "Item updated successfully"
   }
 }

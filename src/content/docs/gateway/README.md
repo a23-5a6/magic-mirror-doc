@@ -11,6 +11,7 @@ Il est conseillé d'utiliser directement le projet [Magic-mirror](https://github
 ## Prérequis
 - API config
 - API weather
+- API auth
 - Docker
 
 ## Initialisation

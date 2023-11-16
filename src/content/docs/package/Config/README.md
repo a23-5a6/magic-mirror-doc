@@ -2,8 +2,6 @@
 title: magic-mirror-config
 description: Projet de miroir intelligent
 ---
-
-# 
 Ce package fait la gestion des configurations incluant la connnexion au service, la gestion de la sauvegarde locale
 
 ## Installation
@@ -21,31 +19,13 @@ import { ConfigManager, Config } from '@a23-5a6/magic-mirror-config'
 - **defaultConfig**: Valeurs pas défaut pour `Config`;
 ### Services
 - **ConfiManager**: Fait la gestion des configurations;
+- **ConfigService**: Fait la gestion des appel http et web socket
 
-## Exemples
-### ConfigManager
-```typescript
-import {ConfigManager, Config} from '@a23-5a6/magic-mirror-config';
-// ...
-const configManager = ConfigManager.getInstance();
+## Changelog
+### 3.0.5
+- Suppression de références externe pour les autres packages
+- Ajout d'évènements supplémentaire pour la connexion et déconnexion au serveur
+- Ajout de configService contenant dorénavent tout les informations sur les socket lié aux configurations
 
-configManager.on('ready', async () => {
-    console.log('Config Manager is ready with config: ', configManager.getConfigs())
-  });
-
-configManager.initialize(
-  async () => readConfig(),
-  (config: Config) => {
-      writeConfig(config);
-  },
-);
-```
-
-## Contribution
-Si vous souhaitez contribuer à ce package, veuillez suivre ces étapes :
-
-- Clonez ce dépôt.
-- Assurez vous de suivre les [instruction d'installation](../README.md#installation)
-- Créez une nouvelle branche pour votre contribution.
-- Faites vos modifications et assurez-vous de respecter les conventions de codage.
-- Soumettez une demande d'extraction (Pull Request) vers la branche principale.
+### 2.2.0
+- Modification de la config par défaut

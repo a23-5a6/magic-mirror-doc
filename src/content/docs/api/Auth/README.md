@@ -16,9 +16,6 @@ Pour initialisation locale (déconseillée), utiliser les commandes suivante :
 Pour initialisation avec docker, utiliser les commandes suivante :
 - `docker compose up -d`
 
-## Environnement
-![env docker](doc/assets/docker_layout.png)
-
 ## API  
 
 Les point d'entrées pour l'api sont les suivants :

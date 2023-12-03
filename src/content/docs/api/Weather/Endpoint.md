@@ -3,9 +3,9 @@ title: Endpoint
 description: Ressource permettant la modification d'une configuration.
 ---
 
-## **Modification d'une configuration**
+## **Récupération de la météo**
 
-Ressource permettant la modification d'une configuration.
+Ressource permettant la récupération de la météo
 
 ### URL
 
@@ -15,7 +15,7 @@ Ressource permettant la modification d'une configuration.
 
 ### Méthode
 
-  `GET` : Pour la récupération de la météo. La météo est mise à jour tout les heures sur le serveur.
+  `GET`: Pour la récupération de la météo. La météo est mise à jour tout les heures sur le serveur.
 
 ### Paramètre
 #### Requis

@@ -12,12 +12,12 @@ Ressource permettant de faire la création d'un compte.
 
 exemple : `http://localhost/auth/register`
 
-### Méthode:
+### Méthode
 
 `POST` : Pour la modification d'une configuration.
 
-### Paramètres:
-#### Requis:
+### Paramètres
+#### Requis
 
 `Content-Type: application/x-www-form-urlencoded`
 

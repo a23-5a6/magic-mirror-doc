@@ -8,21 +8,20 @@ description: A guide in my new Starlight docs site.
 
 Ressource permettant la création d'une configuration.
 
-- **URL**
+### URL
 
   /config
 
   exemple : http://localhost/config
 
-- **Méthode:**
+### Méthode
 
   `POST` : Pour la création d'une configuration. La configuration est envoyé par le client
 
-- **Paramètres:**
-
-  **Requis:**
-
-  Content-Type: application/x-www-form-urlencoded
+### Paramètres:
+#### Requis:
+`X-User-ID: {userId}`
+`Content-Type: application/x-www-form-urlencoded`
 
 ```typescript
 {
@@ -94,20 +93,21 @@ Ressource permettant la création d'une configuration.
 
 Ressource permettant la modification d'une configuration.
 
-- **URL**
+### URL
 
   /config
 
   exemple : http://localhost/config
 
-- **Méthode:**
+### Méthode
 
   `PUT` : Pour la modification d'une configuration.
 
-- **Paramètres:**
+### Paramètres
+#### Requis
+`X-User-ID: {userId}`
 
-  **Requis:**
-
+  ``
   Content-Type: application/x-www-form-urlencoded
 
   ```typescript

@@ -21,27 +21,32 @@ exemple : `http://localhost/game/host`
 `g-unit` Envoie le nombre d'unité sur le terrain  
 
 **Paramètres**
-```json
+```typescript
 {
-    "yellow": {
-        "s": number,
-        "m": number,
-        "l": number,
+    yellow: {
+        s: number,
+        m: number,
+        l: number,
     },
-    "purple":{
-        "s": number,
-        "m": number,
-        "l": number,
-    },
-},
+    purple:{
+        s: number,
+        m: number,
+        l: number,
+    }
+}
 ```
-`g-results` Envoie le résultat de la partie  
+**Error**
+```json
+{ "message": "Invalid game units" }
+```
+
+`g-result` Envoie le résultat de la partie  
 
 **Paramètre**
-```json
+```typescript
 {
-    "winner": "yellow"|"purple",
-},
+    result: "yellow"|"purple"
+}
 ```
 
 ### Évènements `emit`   
@@ -52,10 +57,10 @@ exemple : `http://localhost/game/host`
 `g-spawn` Fait la création d'un nouvel unité dans le jeu   
 
 **Paramètre**
-```json
+```typescript
 {
-    "unit": "s"|"m"|"l",
-},
+    unit: "s"|"m"|"l"
+}
 ```
 
 ## Joindre une partie
@@ -72,17 +77,32 @@ exemple : `http://localhost/game/game/9SUY5T`
 **header**  
 `X-User-ID: {userId}` Id de l'utilisateur 
 
+#### Optionnel
+**Header**
+`X-Username: {username}` Nom de l'utilisateur
+
 ### Évènements `on`
 
-`g-start` Signale que la partie peut démarrer
+`g-start` Signale que la partie peut démarrer   
 
-`g-unit` Envoie un unité dans la partie  
+**Error**
+```json
+// When the user is not the host
+{"message":"Only the host can start the game"}
+```
+
+`g-spawn` Envoie un unité dans la partie  
 
 **Paramètre**
-```json
+```typescript
 {
-    "unit": "s"|"m"|"l",
-},
+    unit: "s"|"m"|"l"
+}
+```
+**Error**
+```json
+// When the game hasn't started yet
+{"message":"The game is not in progress"}
 ```
 
 ### Évènements `emit`   
@@ -91,26 +111,36 @@ exemple : `http://localhost/game/game/9SUY5T`
 `g-unit` Envoie le nombre d'unité sur le terrain  
 
 **Paramètres**
-```json
+```typescript
 {
-    "yellow": {
-        "s": number,
-        "m": number,
-        "l": number,
+    yellow: {
+        s: number,
+        m: number,
+        l: number
     },
-    "purple":{
-        "s": number,
-        "m": number,
-        "l": number,
-    },
-},
+    purple:{
+        s: number,
+        m: number,
+        l: number
+    }
+}
 ```
 
-`g-results` Envoie le résultat de la partie  
+`g-result` Envoie le résultat de la partie.  
+
+`g-info` Info général sur l'état de la partie.
+
+**Paramètres**
+```typescript
+{
+  type: "connection" | "disconnection";
+  message: string;
+}
+```
 
 **Paramètre**
-```json
+```typescript
 {
-    "winner": "yellow"|"purple",
-},
+    result: "yellow"|"purple"
+}
 ```

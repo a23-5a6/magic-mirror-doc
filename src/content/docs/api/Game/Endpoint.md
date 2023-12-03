@@ -35,6 +35,14 @@ Id de l'utilisateur
 }
 ```
 
+#### Code 409 Conflict
+```json
+//Exemple
+{
+    "message": "There is already a game in progress.",
+},
+```
+
 #### Code 422 Unprocessable Content
 ```json
 // Exemple

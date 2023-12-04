@@ -23,12 +23,12 @@ exemple : `http://localhost/game/host`
 **Paramètres**
 ```typescript
 {
-    yellow: {
+    orc: {
         s: number,
         m: number,
         l: number,
     },
-    purple:{
+    humain:{
         s: number,
         m: number,
         l: number,
@@ -45,7 +45,7 @@ exemple : `http://localhost/game/host`
 **Paramètre**
 ```typescript
 {
-    result: "yellow"|"purple"
+    result: "orc"|"humain"
 }
 ```
 
@@ -59,6 +59,7 @@ exemple : `http://localhost/game/host`
 **Paramètre**
 ```typescript
 {
+    team: "orc"|"humain",
     unit: "s"|"m"|"l"
 }
 ```
@@ -96,6 +97,7 @@ exemple : `http://localhost/game/game/9SUY5T`
 **Paramètre**
 ```typescript
 {
+    team: "orc"|"humain",
     unit: "s"|"m"|"l"
 }
 ```
@@ -108,17 +110,26 @@ exemple : `http://localhost/game/game/9SUY5T`
 ### Évènements `emit`   
 `g-ready` Signale que la partie démarre
 
+`g-team` Envoie l'équipe au joueur
+
+**Paramètres**
+```typescript
+{
+    team: "orc":"humain"
+}
+```
+
 `g-unit` Envoie le nombre d'unité sur le terrain  
 
 **Paramètres**
 ```typescript
 {
-    yellow: {
+    orc: {
         s: number,
         m: number,
         l: number
     },
-    purple:{
+    humain:{
         s: number,
         m: number,
         l: number
@@ -141,6 +152,6 @@ exemple : `http://localhost/game/game/9SUY5T`
 **Paramètre**
 ```typescript
 {
-    result: "yellow"|"purple"
+    result: "orc"|"humain"
 }
 ```

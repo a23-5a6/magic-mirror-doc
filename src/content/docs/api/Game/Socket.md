@@ -147,6 +147,13 @@ exemple : `http://localhost/game/game/9SUY5T`
 
 `g-result` Envoie le résultat de la partie.  
 
+**Paramètres**
+```typescript
+{
+    result: "orc":"humain"
+}
+```
+
 `g-info` Info général sur l'état de la partie.
 
 **Paramètres**

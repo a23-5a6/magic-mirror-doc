@@ -18,6 +18,10 @@ import { socket } from '@a23-5a6/magic-mirror-core'
 Suite à une révision des packages, ce package se retrouve pour l'instant sans fonctionnalité.
 
 ## Changelog
+
+### 3.0.2
+- Correction des peer dependencies
+  
 ### 3.0.1
 - Suppression des sockets lié aux configurations
 - Ajout d'instance axios global

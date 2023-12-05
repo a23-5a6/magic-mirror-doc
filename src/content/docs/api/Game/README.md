@@ -10,17 +10,12 @@ Il est conseillé d'utiliser directement le projet [Magic-mirror](https://github
 
 ## Installation
 Pour l'initialisation de l'environnement, utiliser les commandes suivante :
-`docker compose up -d`
+`docker compose up -d`. 
 
 ## API
-Les points d'entrées pour l'api sont les suivants :
-- `GET /weather/{id}` [Récupération de la météo](https://a23-5a6.github.io/magic-mirror-doc/api/weather/endpoint/get/)
-
-## Socket
-La connection au socket se fait via l'url suivante : `http://localhost:4999/`. Nous pouvons faire la configuration 
-au niveau du [`docker-compose`](./docker-compose.yml). Dans le cas ou un nouveau service doit être ajouté, vous devez 
-faire la connexion au socket à l'aide de [Socket.IO](https://socket.io/) en s'assurant de respecter 
-les paramètres requis.
+À partir d'un installation local, tout les endpoint peuvent être accédé à partir de l'url suivant: `http://localhost:4999/`. Il es possible de modifier l'adresse par défaut dans le `.env`. Pour plus d'informations sur les endpoints et les sockets, veuillez visiter les page suivantes: 
+- [Socket](https://a23-5a6.github.io/magic-mirror-doc/api/game/socket/)
+- [Endpoint](https://a23-5a6.github.io/magic-mirror-doc/api/game/endpoint/)
 
 ## Changelog
 ### 1.0.0

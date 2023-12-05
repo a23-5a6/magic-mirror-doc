@@ -24,6 +24,10 @@ import { useExampleContext, useExampleHook } from '@a23-5a6/magic-mirror-react'
 - **useAuthContext**: Context global pour faire la gestion de l'utilisateur.
 
 ## Changelog
+
+### 3.2.6
+- Correction des peer dependencies
+  
 ### 3.2.5
 - Ajout de components pour l'authentification
 

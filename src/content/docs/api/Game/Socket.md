@@ -2,6 +2,7 @@
 title: Socket
 description: Projet de miroir intelligent
 ---
+Tout les connections socket se font à l'aide de [Socket.IO](https://socket.io/)
 
 ## Connection d'un appareil hôte
 Ressource permettant de faire la connection d'un appareil hôte au serveur.
@@ -51,6 +52,13 @@ exemple : `http://localhost/game/host`
 
 ### Évènements `emit`   
 `g-create` Annonce la création d'une nouvelle partie.
+
+**Paramètre**
+```typescript
+{ 
+    gameId: string
+}
+```
 
 `g-start` Annonce le démarrage de la partie
 

@@ -22,6 +22,9 @@ import { ConfigManager, Config } from '@a23-5a6/magic-mirror-config'
 - **ConfigService**: Fait la gestion des appel http et web socket
 
 ## Changelog
+### 3.0.6
+- Correction des peer dependencies
+  
 ### 3.0.5
 - Suppression de références externe pour les autres packages
 - Ajout d'évènements supplémentaire pour la connexion et déconnexion au serveur

@@ -21,5 +21,9 @@ import { socket, User, AuthManager } from '@a23-5a6/magic-mirror-auth'
 - **AuthService**: Contient tout ce qui touche aux appel http et web socket;
 
 ## Changelog
+
+### 1.0.4
+- Correction des peer dependencies
+
 ### 1.0.3
-- - Initialisation du projet
+- Initialisation du projet

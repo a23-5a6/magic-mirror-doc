@@ -3,9 +3,12 @@ title: Changelog
 description: Projet de miroir intelligent
 ---
 
+### 1.4.0
+- Ajout d'un mini jeu;
+
 ### 1.3.0
-- Ajout de l'authentification
-- Modifier le UI pour les configuration
+- Ajout de l'authentification;
+- Modifier le UI pour les configuration;
 
 ### 1.2.0
 - Ajout de la fonctionnalité de recherche de ville pour la météo;

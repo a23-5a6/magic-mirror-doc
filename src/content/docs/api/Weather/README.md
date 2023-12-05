@@ -14,7 +14,7 @@ Pour l'initialisation de l'environnement, utiliser les commandes suivante :
 
 ## API
 Les points d'entrées pour l'api sont les suivants :
-- `GET /weather/{id}` [Récupération de la météo](https://a23-5a6.github.io/magic-mirror-doc/api/weather/endpoint/get/)
+- `GET /weather/{id}` [Récupération de la météo](https://a23-5a6.github.io/magic-mirror-doc/api/weather/endpoint/)
 
 ## Changelog
 ### 1.0.0

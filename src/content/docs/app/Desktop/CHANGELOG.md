@@ -4,6 +4,9 @@ description: Projet de miroir intelligent
 ---
 
 ## Historique des versions
+### 1.3.0
+  - Ajout de l'affichage d'un mini jeu
+
 ### 1.2.0
   - Ajout de l'authentification
 

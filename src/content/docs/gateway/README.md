@@ -9,6 +9,7 @@ Gateway de redirection de l'application de Magic-mirror.
 Il est conseillé d'utiliser directement le projet [Magic-mirror](https://github.com/a23-5a6/magic-mirror)
 
 ## Prérequis
+- API game
 - API config
 - API weather
 - API auth

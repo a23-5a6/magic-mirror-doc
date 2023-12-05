@@ -8,7 +8,7 @@ Ressource permettant la création d'une partie.
 
 ### URL
 `/game/start`  
-exemple : `http://localhost:6993/game/start`
+exemple : `http://localhost:6993/game/create`
 
 ### Méthode
 `POST`  Fait la création d'une nouvelle partie sur un appareil compatible connecté.
